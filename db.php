@@ -1,18 +1,15 @@
 <?php
-// Configuración de la conexión a la base de datos
-$servername = "crudbddv2.mysql.database.azure.com";
-$username = "alswalker";
-$password = "@dministrad0r";
-$database = "test";
+$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
 
-// Crear conexión sin SSL
-$conn = new mysqli($servername, $username, $password, $database, 3306);
+$server = $url["host"];
+$username = $url["user"];
+$password = $url["pass"];
+$db = substr($url["path"], 1);
 
-// Verificar la conexión
+$conn = new mysqli($server, $username, $password, $db);
+
+// Verificar la conexiÃ³n
 if ($conn->connect_error) {
-    die("Error de conexión: " . $conn->connect_error);
+    die("ConexiÃ³n fallida: " . $conn->connect_error);
 }
-
-// Establecer el conjunto de caracteres a UTF-8
-$conn->set_charset("utf8");
 ?>
