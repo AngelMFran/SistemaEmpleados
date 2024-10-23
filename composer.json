@@ -1,21 +1,14 @@
 {
-  "name": "proyecto/sistemaempleados",
-  "description": "Sistema de gestión de empleados usando Phalcon",
-  "require": {
-    "php": "^8.2",
-    "ext-mbstring": "*",
-    "ext-json": "*",
-    "phalcon/devtools": "^4.1",
-    "ext-phalcon": "^5.0"
-  },
-  "scripts": {
-    "post-install-cmd": [
-      "php artisan migrate"
-    ]
-  },
-  "config": {
-    "platform": {
-      "php": "8.2"
+    "name": "proyecto/sistemaempleados",
+    "description": "Sistema de gestión de empleados con Phalcon",
+    "require": {
+        "php": "^8.2",
+        "ext-phalcon": "^5.0",   // Cambiar la versión de Phalcon aquí
+        "phalcon/incubator": "^5.0"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "Phalcon\\Incubator\\Installer::postInstall"
+        ]
     }
-  }
 }
