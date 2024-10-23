@@ -1,14 +1,16 @@
 {
-    "name": "proyecto/sistemaempleados",
-    "description": "Sistema de gestión de empleados con Phalcon",
+    "name": "angel/proyecto",
+    "description": "Sistema de Gestion",
+    "type": "project",
     "require": {
-        "php": "^8.2",
-        "ext-phalcon": "^5.0",   // Cambiar la versión de Phalcon aquí
-        "phalcon/incubator": "^5.0"
+        "ext-phalcon": "^5.8",
+        "phalcon/incubator": "^2.0"
     },
-    "scripts": {
-        "post-install-cmd": [
-            "Phalcon\\Incubator\\Installer::postInstall"
-        ]
-    }
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Angel\\Proyecto\\": "src/"
+        }
+    },
+    "minimum-stability": "stable"
 }
