@@ -1,0 +1,33 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "examplehash1234567890abcdef1234567890abcdef",
+    "packages": [
+        {
+            "name": "phalcon/incubator",
+            "version": "3.4.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phalcon/incubator.git",
+                "reference": "abcdef1234567890abcdef1234567890abcdef12"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phalcon/incubator/zipball/abcdef1234567890abcdef1234567890abcdef12",
+                "reference": "abcdef1234567890abcdef1234567890abcdef12",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1",
+                "ext-phalcon": "^3.4.0"
+            }
+        }
+    ],
+    "packages-dev": [],
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.2.0"
+}
