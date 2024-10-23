@@ -1,10 +1,8 @@
-# public/.htaccess
-
 <IfModule mod_rewrite.c>
     RewriteEngine On
 
     # Define la ruta base del proyecto
-    RewriteBase /
+    RewriteBase /proyecto/app/models/
 
     # Redirige todas las solicitudes a index.php
     RewriteCond %{REQUEST_FILENAME} !-f
