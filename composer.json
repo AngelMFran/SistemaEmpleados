@@ -1,6 +1,16 @@
 {
-  "require": {
-    "php": "^8.3",
-    "ext-phalcon": "*"
-  }
+    "name": "angel/proyecto",
+    "description": "Sistema de Gestion",
+    "type": "project",
+    "require": {
+        "ext-phalcon": "^5.8",
+        "phalcon/incubator": "^2.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Angel\\Proyecto\\": "src/"
+        }
+    },
+    "minimum-stability": "stable"
 }
