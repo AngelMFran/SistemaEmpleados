@@ -1,5 +1,5 @@
 # Usa una imagen base de PHP con Apache
-FROM php:7.4-apache
+FROM php:8.2-apache
 
 # Instala las dependencias necesarias
 RUN apt-get update && apt-get install -y \
@@ -7,20 +7,17 @@ RUN apt-get update && apt-get install -y \
     libpng-dev \
     libjpeg62-turbo-dev \
     libfreetype6-dev \
-    libmcrypt-dev \
-    zlib1g-dev \
     libzip-dev \
     unzip \
     git \
     curl \
     && docker-php-ext-install pdo_mysql gd zip
 
-# Instala Phalcon
-RUN curl -s https://packagecloud.io/install/repositories/phalcon/stable/script.deb.sh | bash \
-    && apt-get install -y php7.4-phalcon
-
-# Habilita el módulo de Phalcon en PHP
-RUN docker-php-ext-enable phalcon
+# Instala PECL y las herramientas necesarias
+RUN apt-get install -y libcurl4-openssl-dev pkg-config libssl-dev \
+    && pecl install psr \
+    && pecl install phalcon-5.2.1 \
+    && docker-php-ext-enable psr phalcon
 
 # Habilita mod_rewrite para Apache
 RUN a2enmod rewrite
